@@ -1,0 +1,1 @@
+'''16. Faça uma função que leia um número não determinado de valores positivos e retorna a média aritmética dos mesmos'''
