@@ -2,15 +2,16 @@
 def registrar_quantidade(lista):
     if len(lista) == 0:
         return Exception
-    registro_qtd = {}
-    for numero in lista:
-        if type(numero) != int:
-            return Exception
-        if numero not in registro_qtd:
-            registro_qtd[numero] = 1
-        else:
-            registro_qtd[numero] += 1
-    
+    else:
+        registro_qtd = {}
+        for numero in lista:
+            if type(numero) != int:
+                return Exception
+            if numero not in registro_qtd:
+                registro_qtd[numero] = 1
+            else:
+                registro_qtd[numero] += 1
+
     return registro_qtd
 
 assert registrar_quantidade([]) == Exception
