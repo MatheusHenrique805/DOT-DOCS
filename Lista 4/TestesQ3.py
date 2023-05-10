@@ -6,7 +6,7 @@ def det_maior_soma(lista):
     if len(lista) == 0:
         return Exception
     else:
-        for i in range(len(lista)):
+        for num in lista:
             if type(lista[i]) != int:
                 return Exception
         for i in range(len(lista) - 1):
