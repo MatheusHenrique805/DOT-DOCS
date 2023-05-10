@@ -2,15 +2,16 @@
 def eliminar_repeticoes(lista):
     if len(lista) == 0:
         return Exception
-    sem_repet = []
-    for num in lista:
-        if type(num) != int:
-            return Exception
-        if num not in sem_repet:
-            sem_repet.append(num)
-        else:
-            continue
-    
+    else:
+        sem_repet = []
+        for num in lista:
+            if type(num) != int:
+                return Exception
+            if num not in sem_repet:
+                sem_repet.append(num)
+            else:
+                continue
+
     return sem_repet
     
 
