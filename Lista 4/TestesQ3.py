@@ -27,4 +27,5 @@ assert det_maior_soma([True]) == Exception
 assert det_maior_soma([4.5]) == Exception
 assert det_maior_soma([5, -2, -2, -7]) == 3
 assert det_maior_soma([10, -405, 1562, 50, -1153, 56]) == 1612
+assert det_maior_soma([-12, -211, -14, -234, -321]) == -223
 print('Aprovada!!!')
