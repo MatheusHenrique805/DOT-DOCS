@@ -27,7 +27,9 @@ def encontra_e_faltante(lista):
             else:
                 continue
             
-    return faltante if len(lista_pura) - len(lista) == 1 else Exception    
+    return faltante if len(lista_pura) - len(lista) == 1 else Exception
+
+
 assert encontra_e_faltante([]) == Exception
 assert encontra_e_faltante(['2313', 3547]) == Exception
 assert encontra_e_faltante([12.4, 457, 143]) == Exception
