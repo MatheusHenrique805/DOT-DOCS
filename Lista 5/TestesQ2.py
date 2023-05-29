@@ -2,7 +2,7 @@
 def verificar_anagrama(str1, str2):
     if (type(str1) != str or type(str2) != str):
         return Exception
-    if (len(str1) <= 1 or len(str2) <= 1):
+    if (len(str1) <= 0 or len(str2) <= 0):
         return Exception
     if str1.isalpha() == False or str2.isalpha() == False:
         return Exception
@@ -24,7 +24,7 @@ assert verificar_anagrama('', '') == Exception
 assert verificar_anagrama(True, 'mostre') == Exception
 assert verificar_anagrama(123.64, 'awsd') == Exception
 assert verificar_anagrama('4345', '6544') == Exception
-assert verificar_anagrama('o', 'arroba') == Exception
+assert verificar_anagrama('o', 'arroba') == False
 assert verificar_anagrama('roma', 'amor') == True
 assert verificar_anagrama('amor', 'omar') == True
 assert verificar_anagrama('america', 'iracema') == True
