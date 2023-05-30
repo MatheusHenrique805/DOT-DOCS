@@ -1,10 +1,9 @@
 '''7. Escreva uma função chamada "encontrar_elemento_faltantse" que receba uma lista de números de 1 a n (sendo n um número inteiro) em ordem aleatória, com um elemento faltando, e retorne o elemento que está faltando. Ex: [4,3,1,5] = 2'''
 def encontra_e_faltante(lista):
-    if len(lista) <= 1:
+    if type(lista) != list or len(lista) <= 1:
         return Exception
     if 0 in lista:
         return Exception
-    
     for num in lista:
         if type(num) != int:
             return Exception 
@@ -22,6 +21,7 @@ def encontra_e_faltante(lista):
         faltante = 0
         for i in range(1, max_num + 1):
             lista_pura.append(i)
+assert encontra_e_faltante(True) == Exception
             if i not in lista:
                 faltante = i
             else:
@@ -30,6 +30,10 @@ def encontra_e_faltante(lista):
     return faltante if len(lista_pura) - len(lista) == 1 else Exception
 
 
+assert encontra_e_faltante(12) == Exception
+assert encontra_e_faltante('True') == Exception
+assert encontra_e_faltante(True) == Exception
+assert encontra_e_faltante(12.32) == Exception
 assert encontra_e_faltante([]) == Exception
 assert encontra_e_faltante(['2313', 3547]) == Exception
 assert encontra_e_faltante([12.4, 457, 143]) == Exception
