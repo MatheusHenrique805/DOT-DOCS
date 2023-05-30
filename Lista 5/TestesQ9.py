@@ -1,6 +1,6 @@
 '''9. Escreva uma função chamada "encontrar_elemento_repetido" que receba uma lista de números como parâmetro e retorne o elemento que se repete mais vezes na lista.'''
 def encontrar_e_repetido(lista):
-    if len(lista) <= 1:
+    if type(lista) != list or len(lista) <= 1:
         return Exception
     for num in lista:
         if type(num) != int and type(num) != float:
@@ -23,12 +23,19 @@ def encontrar_e_repetido(lista):
             if registro_repet[key] != 1:
                 contagem += 1
             else:
-                continue
+                continueassert encontrar_e_repetido((12)) == Exception
+assert encontrar_e_repetido({'A': 12}) == Exception
             
     return num_mais_repetido if num_de_ocorrencias > contagem else Exception
 
  
 assert encontrar_e_repetido([]) == Exception
+assert encontrar_e_repetido(12) == Exception
+assert encontrar_e_repetido('1231') == Exception
+assert encontrar_e_repetido(False) == Exception
+assert encontrar_e_repetido((12)) == Exception
+assert encontrar_e_repetido({'A': 12}) == Exception
+assert encontrar_e_repetido(12.3) == Exception
 assert encontrar_e_repetido([12, 45.6, 32. -12, '43']) == Exception
 assert encontrar_e_repetido([32, 45.6, True]) == Exception
 assert encontrar_e_repetido([12.21]) == Exception
