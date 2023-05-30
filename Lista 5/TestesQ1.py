@@ -25,7 +25,7 @@ def encontrar_primos_gemeos(numero):
         lista_gemeos = []
         for indice in range(len(lista_primos) - 1):
             if lista_primos[indice + 1] - lista_primos[indice] == 2:
-                lists_gemeos.append(lista_primos[indice], lista_primos[indice + 1])
+                lista_gemeos.append(lista_primos[indice], lista_primos[indice + 1])
             else:
                 continue
     
